@@ -66,7 +66,6 @@ const Signup = () => {
 			localStorage.setItem('password', userFormData.password);
 
 			addPerson(props, chatID, userFormData.email);
-			deleteMessage(props, chatID, '583275');
 
 			const { data } = await addUser({
 				variables: { ...userFormData },
@@ -75,7 +74,6 @@ const Signup = () => {
 			Auth.login(data.addUser.token);
 
 			navigate(`/welcome`);
-
 		} catch (err) {
 			console.error(err);
 			console.log('Failed to send user to DB');
@@ -84,7 +82,7 @@ const Signup = () => {
 
 	return (
 		<div className='container-fluid sign-up-background'>
-			<Container >
+			<Container>
 				<Row className='vh-100 d-flex justify-content-center align-items-center'>
 					<Col md={8} lg={6} xs={12}>
 						<Card className='shadow'>
@@ -93,7 +91,9 @@ const Signup = () => {
 									<h2 className='fw-bold mb-2 text-uppercase text-center'>
 										Welcome Solo Travelers{' '}
 									</h2>
-									<p className='text-center mb-5'>Please enter your Sign Up info!</p>
+									<p className='text-center mb-5'>
+										Please enter your Sign Up info!
+									</p>
 									<div className='mb-3'>
 										<Form onSubmit={createUser}>
 											<Form.Group
@@ -102,7 +102,7 @@ const Signup = () => {
 											>
 												<Form.Label>First name</Form.Label>
 												<Form.Control
-													className="form-bubble"
+													className='form-bubble'
 													type='First name'
 													placeholder='First name'
 													value={firstName}
@@ -116,7 +116,7 @@ const Signup = () => {
 											>
 												<Form.Label>Last name</Form.Label>
 												<Form.Control
-													className="form-bubble"
+													className='form-bubble'
 													type='Last name'
 													placeholder='Last name'
 													value={lastName}
@@ -130,7 +130,7 @@ const Signup = () => {
 											>
 												<Form.Label>Username</Form.Label>
 												<Form.Control
-													className="form-bubble"
+													className='form-bubble'
 													type='text'
 													placeholder='Username'
 													name='username'
@@ -144,7 +144,7 @@ const Signup = () => {
 													Email address
 												</Form.Label>
 												<Form.Control
-													className="form-bubble"
+													className='form-bubble'
 													type='email'
 													placeholder='Enter email'
 													name='email'
@@ -159,7 +159,7 @@ const Signup = () => {
 											>
 												<Form.Label>Password</Form.Label>
 												<Form.Control
-													className="form-bubble"
+													className='form-bubble'
 													type='password'
 													placeholder='Password'
 													name='password'
@@ -170,10 +170,14 @@ const Signup = () => {
 											</Form.Group>
 
 											<div className='d-grid d-flex justify-content-center align-items-center'>
-												<motion.button className='sign-up-btn' type='submit'
-												whileHover={{
-													scale: 1.05,
-													transition:{duration: 0.3}}}>
+												<motion.button
+													className='sign-up-btn'
+													type='submit'
+													whileHover={{
+														scale: 1.05,
+														transition: { duration: 0.3 },
+													}}
+												>
 													Signup
 												</motion.button>
 											</div>
@@ -189,7 +193,9 @@ const Signup = () => {
 													}}
 													whileHover={{
 														scale: 1.05,
-														transition:{duration: 0.3}}}>
+														transition: { duration: 0.3 },
+													}}
+												>
 													Login
 												</motion.button>
 											</p>

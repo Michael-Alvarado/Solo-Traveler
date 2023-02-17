@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_TRIP } from '../utils/mutations';
-import Login from './Login';
-import Auth from '../utils/auth';
+// import Login from './Login';
+// import Auth from '../utils/auth';
 
 import './styles/addtrip.scss';
 import { motion } from 'framer-motion';
@@ -23,7 +23,7 @@ function AddTrip() {
 
 	const handleFormSubmit = async (e) => {
 		e.preventDefault();
-			
+
 		try {
 			await createTrip({
 				variables: { location: location, note: note },
@@ -47,7 +47,6 @@ function AddTrip() {
 			<div className='add-trip-form row d-flex justify-content-center align-items-center'>
 				<div className='trip-input col d-flex flex-column align-items-center justify-contents-center'>
 					<div className='mb-3 w-75'>
-
 						<label htmlFor='location' className='form-label'>
 							Location
 						</label>
@@ -78,7 +77,7 @@ function AddTrip() {
 						className='create-trip-btn'
 						whileHover={{
 							scale: 1.1,
-							transition: { duration: 0.3 }
+							transition: { duration: 0.3 },
 						}}
 					>
 						CREATE TRIP +

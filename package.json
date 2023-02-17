@@ -1,5 +1,5 @@
 {
-  "name": "project3",
+  "name": "Solo Traveler",
   "version": "1.0.0",
   "description": "solo traveler",
   "main": "server/server.js",
@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SSimonPhd/project3.git"
+    "url": "git+https://github.com/Michael-Alvarado/Solo-Traveler.git"
   },
   "author": "Catherine Polk, Erica Morabito, Adrian Brown, Michael Alvarado, Scott Simon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SSimonPhd/project3/issues",
-    "homepage": "https://github.com/SSimonPhd/project3#readme"
+    "url": "https://github.com/Michael-Alvarado/Solo-Traveler/issues",
+    "homepage": "https://github.com/Michael-Alvarado/Solo-Traveler#readme"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",

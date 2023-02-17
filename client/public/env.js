@@ -1,1 +1,7 @@
-window.env = {};
+window.env = {
+  "REACT_APP_CE_PUBLIC_KEY": "d7df7586-b487-4aaf-86f2-ec669a511885",
+  "REACT_APP_CE_PRIVATE_KEY": "830ecf7c-7cbf-4f00-9b07-3f66ccf573fa",
+  "REACT_APP_CE_CHAT_ID": "145724",
+  "REACT_APP_CE_ADMIN_USERNAME": "test@test.com",
+  "REACT_APP_CE_ADMIN_SECRET": "test1234"
+};
